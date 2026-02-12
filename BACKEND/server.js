@@ -34,10 +34,9 @@ app.listen(PORT, () => {
   console.log("SERVER RUNING AT P0RT 3000");
 });
 
-// Serve frontend
+// Serve React frontend (Express v5 safe)
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
-// React fallback
-app.get("/*", (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
