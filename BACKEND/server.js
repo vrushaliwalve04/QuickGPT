@@ -17,9 +17,9 @@ app.use(express.urlencoded({ extended: true })); // <-- ADD THIS
 
 //rotes
 
-app.get("/", (req, res) => {
-  res.send("SERVER IS WORKING");
-});
+//app.get("/", (req, res) => {
+  //res.send("SERVER IS WORKING");
+//});
 app.use("/api/user", UserRouter);
 app.use("/api/chat", chatRouter);
 app.use("/api/message",messageRouter)
